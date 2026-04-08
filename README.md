@@ -12,7 +12,7 @@ This repository provides an elegant and official LaTeX letterhead template for a
 *(Note to author: Make sure to upload your compiled PDF screenshot to `preview/preview_full.png` so it displays here!)*
 
 <p align="center">
-  <img src="preview/preview_full.png" alt="Cover Letter Preview" width="700">
+  <img src="preview/preview_full.jpg" alt="Cover Letter Preview" width="700">
 </p>
 
 ## ✨ Key Features
@@ -28,9 +28,9 @@ This repository provides an elegant and official LaTeX letterhead template for a
 SZTU-CoverLetter-Template/
 ├── assets/                    # Static image resources
 │   ├── SZTU.png               # Official SZTU Logo (Transparent PNG recommended)
-│   └── signature.png          # Your digital signature image
+│   └── signature.png          # Your digital signature image, not including in the template now
 ├── preview/                   
-│   └── preview_full.png       # High-res screenshot for this README
+│   └── preview_full.jpg       # High-res screenshot for this README
 ├── .gitignore                 # Ignores LaTeX build files (*.log, *.aux, etc.)
 ├── LICENSE                    # MIT License
 ├── README.md                  # Project documentation
