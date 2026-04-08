@@ -1,0 +1,121 @@
+\documentclass[a4paper,10.5pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+% 顶部边距设为4.5cm，为信头留出足够空间
+\geometry{top=4.5cm, bottom=3cm, left=2.5cm, right=2.5cm, headheight=4.5cm}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{tikz}
+\usepackage[en-US]{datetime2} % 设置为美式英语格式
+
+% --- 颜色与字体配置 ---
+\definecolor{sztublue}{RGB}{16, 68, 133}
+
+% 【注意】以下字体命令必须使用 XeLaTeX 引擎编译！
+\newCJKfontfamily\heavyhei{Microsoft YaHei}[AutoFakeBold=true] 
+\newCJKfontfamily\xingkai{STXingkai}
+\newfontfamily\ensans{Arial}[LetterSpace=3, FakeBold=1.3]
+
+% --- 段落格式设置 ---
+\setlength{\parindent}{0pt} % 取消段尾缩进
+\setlength{\parskip}{1em}   % 增加段落间距
+
+\pagestyle{fancy}
+\fancyhf{} 
+\renewcommand{\headrulewidth}{0pt}
+
+% ==== 定义页眉 (官方信头) ====
+\fancyhead[C]{
+    \def\headerheight{1.5cm} 
+    
+    % --- 第1栏：左侧校徽 ---
+    \begin{minipage}[c][\headerheight][c]{0.1\textwidth}
+        \includegraphics[height=1.8cm, keepaspectratio]{assets/SZTU.png}
+    \end{minipage}%
+    \hspace{0.035\textwidth}% 
+    % --- 第2栏：中心校名与学院名 ---
+    \begin{minipage}[c][\headerheight][s]{0.385\textwidth}
+        \centering 
+        
+        {\textcolor{sztublue}{\Large \heavyhei \ziju{0.25} \textbf{深圳技术大学}}}\\[-0.1cm] 
+        {\textcolor{sztublue}{\scriptsize \ensans {Shenzhen Technology University}}}\\[-0.1cm]
+        
+        {\tikz[baseline=-0.5ex] {
+            \shade[left color=sztublue, right color=sztublue!30!white] 
+                (0,0) rectangle (0.5\linewidth, 3.5pt);
+            \shade[left color=sztublue!30!white, right color=sztublue] 
+                (0.5\linewidth, 0) rectangle (\linewidth, 3.5pt);
+        }}\\[0.0cm]
+        
+        {\textcolor{sztublue}{\LARGE \xingkai \ziju{0.3} 工程物理学院}}
+    \end{minipage}%
+    \hfill
+    % --- 第3栏：右侧联系方式 ---
+    \begin{minipage}[c][\headerheight][b]{0.28\textwidth}
+        \fontsize{7.5pt}{9pt} \color{sztublue} \heavyhei \ensans 
+        
+        \faGlobe \ \textbf{www.sztu.edu.cn} \\[0.1cm]
+        \faMapMarker \ \textbf{广东省深圳市坪山区兰田路3002号} \\[0.1cm]
+        \faPhone \ \textbf{+(86)\ 0755-2325 6562}
+        
+        \vspace*{0.1cm} 
+    \end{minipage}
+
+    \vspace{0.3cm} 
+    \textcolor{sztublue}{\rule{\textwidth}{0.6pt}}
+}
+
+% ==== 定义页脚 ====
+\fancyfoot[C]{
+    \textcolor{sztublue}{\rule{\textwidth}{0.8pt}}
+}
+
+\begin{document}
+
+\hfill \today
+
+\vspace{1.5em} 
+
+Dear Colleague,
+
+Welcome to this customized LaTeX Cover Letter template for academic submissions. 
+
+\textbf{1. Required Fonts} \\
+Ensure the following fonts are installed, or modify the preamble to match your local alternatives: \textbf{Microsoft YaHei} (main Chinese title), \textbf{STXingkai} (华文行楷, sub-title), and \textbf{Arial} (English header).
+
+\textbf{2. Customizing the Header} \\
+The header uses three \texttt{minipage} columns. Adjust their width parameters to fit your specific logo. The central gradient line is natively rendered via the \texttt{tikz} package.
+
+\textbf{3. Drafting Your Letter} \\
+This template utilizes a block-paragraph style. Simply leave a single blank line in the source code to create modern paragraph breaks—no manual \texttt{\textbackslash vspace} is needed.
+
+\textbf{4. Signature Block} \\
+The dual-column layout at the bottom horizontally aligns your digital signature image with your printed details, significantly saving vertical space.
+
+Best of luck with your manuscript!
+
+\vspace{2em} 
+
+% --- 结尾落款（横向紧凑版） ---
+
+Sincerely,
+
+\vspace{0.5em} 
+
+\noindent 
+\begin{minipage}[c]{0.25\textwidth}
+    \rule{3cm}{1cm}
+    % 请将同目录下的 signature.png 替换为您自己的电子签名
+    % \includegraphics[height=1.8cm, width=\linewidth, keepaspectratio]{signature.png}
+\end{minipage}
+\begin{minipage}[c]{0.7\textwidth}
+    \vspace{0.2cm} 
+    \textbf{Your Name} \\
+    Your Academic Title, e.g., Associate Professor \\
+    Shenzhen Technology University, China \\
+    \textit{Email: your\_email@sztu.edu.cn}
+\end{minipage}
+\end{document}
