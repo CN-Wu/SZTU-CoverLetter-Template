@@ -35,9 +35,9 @@ SZTU-CoverLetter-Template/
 ├── LICENSE                    # MIT License
 ├── README.md                  # Project documentation
 └── SZTU_CoverLetter.tex       # The main LaTeX source code
+```
 
-
-🛠️ Prerequisites
+## 🛠️ Prerequisites
 To compile this template successfully, your local environment or cloud platform must meet the following requirements:
 
 Compiler: You MUST compile this document using XeLaTeX. (pdfLaTeX will throw errors due to advanced font packages).
@@ -50,7 +50,7 @@ STXingkai (华文行楷) - For the elegant sub-title (e.g., College Name).
 
 Arial - For English headers.
 
-🚀 How to Use
+## 🚀 How to Use
 Local Environment (TeX Live / MiKTeX / MacTeX)
 Clone this repository:
 
@@ -77,5 +77,5 @@ Crucial Step: Go to Menu (top left) -> Compiler -> Change from pdfLaTeX to XeLaT
 
 Note: Overleaf's Linux servers do not have Windows fonts pre-installed. You will need to upload msyh.ttf (YaHei) and STXINGKA.TTF to your Overleaf project and update the font definition commands in the preamble.
 
-📝 License
+## 📝 License
 This project is licensed under the MIT License. Feel free to fork, modify, and use it for your own academic and professional needs.
